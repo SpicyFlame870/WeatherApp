@@ -9,7 +9,7 @@ let weather = {
     },
     fetchWeatherCord : function(lati,long){
 
-        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lati}&lon=${long}&appid=${this.apiKey}`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lati}&lon=${long}&units=metric&appid=${this.apiKey}`)
         .then((response) => response.json())
         .then((data)=>this.displayWeather(data))
     },
